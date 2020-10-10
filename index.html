@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Document</title> 
+ </head> 
+ <body> 
+  <h1>JSON</h1> 
+  <h2>JavaScript Object Notation</h2> 
+  <ul id="users-container"> 
+  </ul> 
+  <input id="title" type="text" placeholder="title"> 
+  <br> 
+  <input id="bodyContent" type="text" placeholder="body"> 
+  <br> 
+  <button id="submit">submit</button> 
+  <script>
+        const user = {
+            id: 083,
+            name: "Noor",
+            lover: {
+                name: 'Khadija',
+                favFood: 'Pizza'
+            },
+            friends: ["Mishu","Jihad","Darda","Didarul"],
+            friendsAge: [21, 34, 55]
+        };
+        //{"id":83,"name":"Noor"}
+        const userJSON = JSON.stringify(user);
+        console.log(userJSON);
+        const userFromJSON = JSON.parse(userJSON);
+        console.log(userFromJSON);
+    </script> 
+  <script src="index.js"></script> 
+  <script src="index2.js"></script>  
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
+</html>
